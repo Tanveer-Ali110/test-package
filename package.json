@@ -1,12 +1,13 @@
 {
-  "name": "test-package",
+  "name": "tanveer-test",
   "version": "1.0.0",
   "description": "test-package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "private":false,
   "scripts": {
     "build": "tsc",
-    "prepare":"npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,7 @@
   "devDependencies": {
     "typescript": "^5.1.6"
   },
-  "files":["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }
