@@ -1,14 +1,13 @@
 {
   "name": "tanveer-test",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "test-package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "private": false,
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
-    "version": "standard-version"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
