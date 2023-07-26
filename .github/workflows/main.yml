@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Bump Package Version
-        run: npm run version
+        run: npm version patch
 
       - name: Build Package (if needed)
         run: npm run build  # Only required if your package needs a build step
