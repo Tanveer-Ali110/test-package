@@ -19,6 +19,11 @@ jobs:
           node-version: 16.x  # Adjust this to your Node.js version
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Set Git User Identity
+        run: |
+          git config  user.email
+          git config  user.name 
+
       - name: Install Dependencies
         run: npm ci
 
