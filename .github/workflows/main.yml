@@ -33,16 +33,6 @@ jobs:
           # Here's an example of using 'npm version' to bump the patch version
           npm version patch
 
-          # Read the updated version from package.json and store it in a variable
-          PACKAGE_VERSION=$(node -pe "require('./package.json').version")
-
-          # Use jq to update the package.json file with the new version
-          jq ".version = \"${PACKAGE_VERSION}\"" package.json > tmp_package.json && mv tmp_package.json package.json
-
-          # Commit the updated package.json back to the repository
-          git add package.json
-          git commit -m "Update package.json version to ${PACKAGE_VERSION}"
-
       - name: Build Package (if needed)
         run: npm run build # Only required if your package needs a build step
 
