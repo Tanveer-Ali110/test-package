@@ -22,11 +22,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Set Git User Identity
-        run: |
-          git config --global user.email "ali.tanveer1012@gmail.com"
-          git config --global user.name "Tanveer-Ali110"
-
       - name: Build Package (if needed)
         run: npm run build # Only required if your package needs a build step
 
