@@ -27,11 +27,12 @@ jobs:
           git config --global user.email "ali.tanveer1012@gmail.com"
           git config --global user.name "Tanveer-Ali110"
 
-
       - name: Build Package (if needed)
         run: npm run build # Only required if your package needs a build step
 
-      - name: Publish to npm
+      - name: Run Semantic Release
+        run: npx semantic-release
+      # - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # Add your npm token as a secret
-        run: npm publish --access public
+        # run: npm publish --access public
