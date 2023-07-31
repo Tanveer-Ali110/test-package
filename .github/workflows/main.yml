@@ -27,8 +27,7 @@ jobs:
 
       - name: Run Semantic Release
         run: npx semantic-release
-        # - name: Publish to npm
+
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # Add your npm token as a secret
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        # run: npm publish --access public
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
