@@ -1,6 +1,6 @@
 {
   "name": "tanveer-test",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "test-package",
   "type": "module",
   "main": "lib/index.js",
