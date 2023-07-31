@@ -6,6 +6,9 @@
         "outDir": "./lib",
         "strict": true
     },
+    "resolve": {
+        "extensions": [".js", ".json", ".tsx", "ts"]
+      },
     "include": [
         "src"
     ],
