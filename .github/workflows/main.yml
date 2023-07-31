@@ -6,7 +6,7 @@ on:
       - main # Adjust this to the main branch name of your repository
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,12 +23,12 @@ jobs:
         run: npm ci
 
       - name: Build Package (if needed)
-        run: npm run build # Only required if your package needs a build step
+        run: npm run build --if-present # Only required if your package needs a build step
 
       - name: Run Semantic Release
         run: npx semantic-release
-      # - name: Publish to npm
+        # - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # Add your npm token as a secret
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         # run: npm publish --access public
