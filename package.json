@@ -2,6 +2,7 @@
   "name": "tanveer-test",
   "version": "1.0.5",
   "description": "test-package",
+  "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "private": false,
