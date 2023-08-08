@@ -1,7 +1,7 @@
 name: Publish npm Package
 
 on:
-  pull_request:
+  push:
     branches:
       - main # Adjust this to the main branch name of your repository
 
