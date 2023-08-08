@@ -2,8 +2,8 @@ name: Publish npm Package
 
 on:
   pull_request:
-    # branches:
-    #   - main # Adjust this to the main branch name of your repository
+    branches:
+      - main # Adjust this to the main branch name of your repository
     types:
       - opened
       - synchronize
