@@ -2,17 +2,17 @@ name: Publish npm Package
 
 on:
   pull_request:
-    branches:
-      - main # Adjust this to the main branch name of your repository
+    # branches:
+    #   - main # Adjust this to the main branch name of your repository
     types:
       - opened
       - synchronize
 
 jobs:
   release:
-    permissions:
-      packages: write
-      contents: write
+    # permissions:
+    #   packages: write
+    #   contents: write
     runs-on: ubuntu-latest
 
     steps:
@@ -35,5 +35,5 @@ jobs:
         run: npx semantic-release
 
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # Add your npm token as a secret
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # Add your npm token as a secret
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
