@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main # Adjust this to the main branch name of your repository
+      - dev
       
 jobs:
   release:
